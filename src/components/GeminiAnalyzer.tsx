@@ -6,7 +6,7 @@ import { useGeminiAnalysis } from '../hooks/useGeminiAnalysis';
 
 export default function GeminiAnalyzer() {
   const [inputData, setInputData] = useState('');
-  const { mutate: analyzeData, data: result, isError } = useGeminiAnalysis();
+  const { mutate: analyzeData, data: result,isLoading,isError } = useGeminiAnalysis();
 
   const handleAnalyze = () => {
     analyzeData(inputData);
